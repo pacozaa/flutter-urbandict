@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:urbandic/DefoList.dart';
 
 void main() => runApp(MyApp());
 
@@ -75,6 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Container(
               color: Colors.green,
+              child: DefoList(),
+              padding: EdgeInsets.all(20.0),
+              margin: EdgeInsets.all(20.0),
+              width: 500.0,
+              height: 500.0,
             )
           ],
         ),
