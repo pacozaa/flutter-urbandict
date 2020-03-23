@@ -45,6 +45,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  String searchTerm = '';
+  
   @override
   void initState() {
     super.initState();
@@ -60,7 +62,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(              
+            Container(   
+              padding: EdgeInsets.all(20.0),
+              width: 500.0,
+              child: TextField(
+                onChanged: (text) {
+                  setState(() {
+                    searchTerm = text;
+                  });
+                },
+              ),           
             ),
             Container(
               color: Colors.green,
