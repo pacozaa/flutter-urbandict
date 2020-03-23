@@ -48,12 +48,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   String searchTerm = '';
-
-  
-
-  // TextEditingController _controller;
 
   @override
   void initState() {
@@ -115,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   if (snapshot.hasError) print(snapshot.error);
 
                   return snapshot.hasData
-                      ? DefoList()
+                      ? DefoList(words: snapshot.data)
                       : Center(child: CircularProgressIndicator());
                 },
               ),
